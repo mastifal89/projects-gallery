@@ -1,0 +1,152 @@
+.projectsContainer {
+  display: flex;
+  transition-timing-function: ease;
+  transition-property: opacity, transform;
+  transition-duration: 0.4s;
+  height: 100%;
+}
+
+.filterMenu {
+  display: flex;
+  border-right: 1px solid #1e2d3d;
+  color: rgb(96 123 150);
+  flex-direction: column;
+  width: 100%;
+  max-width: 275px !important;
+  min-width: 275px !important;
+}
+
+.filterTitle {
+  display: flex;
+  border-bottom: 1px solid #1e2d3d;
+  min-height: 35px;
+  width: 100%;
+  align-items: center;
+  min-width: 100%;
+}
+
+.arrowTitle {
+  transition: 0.1s;
+  margin-right: 10px;
+  margin-left: 0.75rem;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  vertical-align: middle;
+}
+
+.navFilters {
+  padding: 10px 25px;
+  width: 100%;
+}
+
+.navFiltersItem {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  align-items: center;
+  display: flex;
+}
+
+.navFiltersCheckbox {
+  border-color: currentColor;
+  background-color: transparent;
+  appearance: none;
+  border: 2px solid;
+  border-radius: 0.15em;
+  height: 1.15em;
+  margin-top: 1px;
+  width: 1.15em;
+  color: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+
+  &:hover {
+    background-color: #0000001a;
+    background-image: none;
+    box-shadow: 0 0 0 2px #607b968b;
+    cursor: pointer;
+  }
+}
+
+.navFilters input[type='checkbox']:checked {
+  background-color: gray;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.navFiltersIcon {
+  opacity: 0.4;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  max-width: 100%;
+  display: block;
+}
+
+.navFiltersText {
+  font-size: 14px;
+}
+
+.projectsBody {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  width: 100%;
+}
+
+.bodyTitle {
+  max-height: 35px;
+  min-height: 35px;
+  display: flex;
+  border-bottom: 1px solid #1e2d3d;
+  align-items: center;
+  width: 100%;
+}
+
+.bodyTitleContainer {
+  border-right: 1px solid #1e2d3d;
+  align-items: center;
+  height: 100%;
+  display: flex;
+}
+
+.bodyTitleText {
+  color: rgb(96 123 150);
+  font-size: 0.875rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  margin: 0;
+  line-height: 1.25rem;
+}
+
+.bodyTitleIcon {
+  margin: 0.75rem;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.projectsBodyContainer {
+  display: grid;
+  max-width: 100%;
+  height: 100%;
+  align-self: center;
+}
+
+@media (min-width: 768px) {
+  .projectsBodyContainer {
+    padding: 50px 50px 40px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1350px) {
+  .projectsBodyContainer {
+    padding: 50px 80px 40px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

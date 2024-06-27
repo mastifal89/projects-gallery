@@ -1,0 +1,257 @@
+.dashboardLayout {
+  background-color: rgb(1 22 39);
+  border: 1px solid #1e2d3d;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.dashboardHeader {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid #1e2d3d;
+}
+
+.dashboardNav {
+  display: flex;
+  font-size: 13px;
+}
+
+.dashboardName {
+  border-bottom: none;
+  border-right: 1px solid #1e2d3d;
+  color: rgb(96 123 150);
+  display: flex;
+  height: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  align-items: center;
+  max-width: 275px !important;
+  min-width: 275px !important;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #172330;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.dashBoardItemContainer {
+  display: flex;
+  max-width: 300px !important;
+  min-width: 300px !important;
+  text-wrap: nowrap;
+}
+
+.dashboardItem {
+  align-items: center;
+  color: rgb(96 123 150);
+  display: flex;
+  height: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-right: 1px solid #1e2d3d;
+  font-size: 13px;
+  height: 45px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #172330;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.dashboardMain {
+  display: flex;
+  flex: 1 1 auto;
+  height: 100%;
+  padding-left: 15%;
+  width: 100%;
+}
+
+.firstSection {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.firstSectionHead {
+  padding-bottom: 3rem;
+}
+
+.firstSectionHeadTitle {
+  color: #e5e9f0;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.firstSectionHeadName {
+  color: #e5e9f0;
+  font-size: 58px;
+  line-height: 1;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.firstSectionDeveloper {
+  display: flex;
+  color: #4d5bce;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.dashboardGradientBlue {
+  border-radius: 100% 50% 100% 0;
+  bottom: 10%;
+  height: 500px;
+  opacity: 0.5;
+  position: fixed;
+  right: 10%;
+  width: 500px;
+  filter: blur(70px);
+  z-index: 10;
+  background: radial-gradient(circle at 50% 50%, #4d5bce, rgba(76, 0, 255, 0));
+  rotate: 10deg;
+}
+
+.dashboardGradientGreen {
+  border-radius: 100% 0 0;
+  filter: blur(100px);
+  height: 400px;
+  opacity: 0.5;
+  position: fixed;
+  right: 35%;
+  rotate: 20deg;
+  top: 10%;
+  width: 400px;
+  background: radial-gradient(circle at 50% 50%, #43d9ad, rgba(76, 0, 255, 0));
+  z-index: 10;
+}
+
+.blinkingCursor {
+  font-weight: 700;
+  font-size: 30px;
+  color: #2e3d48;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #e5e9f0;
+  }
+}
+
+@-moz-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #e5e9f0;
+  }
+}
+
+@-webkit-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #e5e9f0;
+  }
+}
+
+@-ms-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #e5e9f0;
+  }
+}
+
+@-o-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #e5e9f0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .secondSection {
+    display: flex !important;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.githubIcon {
+  fill: #071511;
+  border: 0;
+  color: #43d9ad;
+  right: 0;
+  top: 0;
+}
+
+.icon {
+  display: block;
+  width: 80;
+  height: 80;
+  overflow-clip-margin: content-box;
+  overflow: hidden;
+}
+
+.firstSectionInfo {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  padding-block: 2.5rem;
+}
+
+.info {
+  display: flex;
+  color: #607b96;
+  font-size: 16px;
+  line-height: 1;
+  padding-bottom: 1rem;
+}
+
+.code {
+  color: #e5e9f0;
+}
+
+.identifier {
+  color: #4d5bce;
+  font-size: 16px;
+}
+
+.variable {
+  color: #43d9ad;
+  font-size: 16px;
+}
+
+.string {
+  color: #e99287;
+  text-decoration: inherit;
+  font-family: Fira Code Medium;
+}

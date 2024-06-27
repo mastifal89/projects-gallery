@@ -1,0 +1,32 @@
+.console {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, #237b6d, rgba(67, 217, 173, 0.13));
+  border: 1px solid #000;
+  height: 475px;
+  justify-content: space-between;
+  padding: 30px;
+  position: relative;
+  width: 430px;
+}
+
+.gameScreen {
+  height: 320px;
+  width: 192px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.gameCanvas {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  position: relative;
+}
+.snake-part {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  position: absolute;
+}
