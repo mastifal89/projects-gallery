@@ -1,0 +1,105 @@
+.projectCard {
+    min-width: 100%;
+    padding-inline: 20px;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+}
+
+.projectTitleContainer {
+    display: flex;
+    margin-bottom: .75rem;
+    margin-top: .75rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
+
+.projectTitle {
+    color: rgb(85 101 232);
+    margin-right: .75rem;
+    font-size: 15px;
+    margin: 0;
+    font-weight: inherit;
+    line-height: 1.25rem;
+}
+
+.projectSubtitle {
+    color: rgb(96 123 150);
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.projectCardContainer {
+    background-color: #011221;
+    border: 1px solid #1e2d3d;
+    border-radius: 15px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.projectCardImageContainer {
+    max-height: 120px;
+    overflow: hidden;
+    position: relative;
+}
+
+.projectCardImageIconContainer {
+    display: flex;
+    top: .75rem;
+    right: .75rem;
+    position: absolute;
+
+    &:hover {
+        cursor: pointer;
+        opacity: .75;
+    }
+
+}
+
+.projectCardImageIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: .25rem;
+    margin-right: .25rem;
+    max-width: 100%;
+}
+
+.projectCardImage {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+.descriptionContainer {
+    border-top: 1px solid #1e2d3d;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.description {
+    color: rgb(96, 123, 150);
+    font-size: .875rem;
+    line-height: 1.25rem;
+    margin: 0;
+    margin-bottom: 1.25rem;
+}
+
+.descriptionButton {
+    background-color: #1c2b3a;
+    color: rgb(255 255 255);
+    font-size: .75rem;
+    line-height: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    border-radius: 0.5rem;
+    text-decoration: inherit;
+}
