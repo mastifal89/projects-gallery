@@ -8,7 +8,7 @@ export const Footer = () => {
         <div className={styles.footerFirstSection}>
           <div className={styles.footerSocialTitle}>find me in:</div>
           <div className={styles.footerSocialIcons}>
-            <a href="#" className={styles.footerSocialIconsLink}>
+            <a href="https://x.com/mastifal89" className={styles.footerSocialIconsLink}>
               <img
                 src="/icons/twitter-icon.svg"
                 alt="twitter"
