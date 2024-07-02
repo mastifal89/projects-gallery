@@ -11,7 +11,7 @@ export default function DashboardLayout({ children }) {
         <nav className={styles.dashboardNav}>
             <GithubIcon />
           <div className={styles.dashboardNameContainer}>
-            <Link href="/" className={styles.dashboardName}>blasco juan manuel</Link>
+            <Link href="/" className={styles.dashboardName}>blasco-juan-manuel</Link>
           </div>
           <div className={styles.dashBoardItemContainer}>
             <Link href="/" className={styles.dashboardItem}>_hello</Link>

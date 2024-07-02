@@ -1,9 +1,37 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import {
+  generateRandomCodeSnippet,
+  getRandomElement,
+} from "../../utils/codeSnippetGenerator";
 import styles from "./styles.module.css";
+
+const personalInfo = [
+  {
+    title: "bio",
+    content: "asdasdasdasdasd",
+    icon: "/icons/folder1.svg",
+  },
+  {
+    title: "interests",
+    content: "asdasdasdasdasd",
+    icon: "/icons/folder2.svg",
+  },
+  {
+    title: "education",
+    content: "asdasdasdasdasd",
+    icon: "/icons/folder3.svg",
+  },
+];
 
 export default function AboutMe() {
   const [section, setSection] = useState(0);
+  const [codeSnippet, setCodeSnippet] = useState("");
+
+  useEffect(() => {
+    const snippet = generateRandomCodeSnippet();
+    setCodeSnippet(snippet);
+  }, []);
 
   const handleSectionClick = (section: number) => {
     setSection(section);
@@ -28,38 +56,19 @@ export default function AboutMe() {
             <img className={styles.arrow} src="/icons/arrow.svg" />
             <p className={styles.sectionPersonalInfo}>personal-info</p>
           </div>
-          <div>
+          {personalInfo.map((info, index) => (
             <div
+              key={index}
               className={styles.itemContainer}
-              onClick={() => handleSectionClick(0)}
+              onClick={() => handleSectionClick(index)}
             >
               <div className={styles.item}>
                 <img className={styles.diple} src="/icons/diple.svg" />
-                <img className={styles.folder} src="/icons/folder1.svg" />
-                <p style={{ margin: 0 }}>bio</p>
+                <img className={styles.folder} src={info.icon} />
+                <p style={{ margin: 0 }}>{info.title}</p>
               </div>
             </div>
-            <div
-              className={styles.itemContainer}
-              onClick={() => handleSectionClick(0)}
-            >
-              <div className={styles.item}>
-                <img className={styles.diple} src="/icons/diple.svg" />
-                <img className={styles.folder} src="/icons/folder2.svg" />
-                <p style={{ margin: 0 }}>bio</p>
-              </div>
-            </div>
-            <div
-              className={styles.itemContainer}
-              onClick={() => handleSectionClick(0)}
-            >
-              <div className={styles.item}>
-                <img className={styles.diple} src="/icons/diple.svg" />
-                <img className={styles.folder} src="/icons/folder3.svg" />
-                <p style={{ margin: 0 }}>bio</p>
-              </div>
-            </div>
-          </div>
+          ))}
           <div className={styles.sectionContact}>
             <img className={styles.arrow} src="/icons/arrow.svg" />
             <p className={styles.sectionPersonalInfo}>contacts</p>
@@ -102,6 +111,9 @@ export default function AboutMe() {
           <div className={styles.snippetContainer}>
             <div className={styles.snippetSubContainer}>
               <h3 className={styles.snippetTitle}>// Code snippet showcase</h3>
+              <pre>
+                <code className="language-javascript">{codeSnippet}</code>
+              </pre>
             </div>
           </div>
         </div>
