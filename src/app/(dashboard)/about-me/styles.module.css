@@ -1,251 +1,371 @@
 .main {
-    display: flex;
-    flex: 1 1 auto;
-    overflow: hidden;
-    height: 100%;
-    flex-direction: row;
-    opacity: 1;
-    transform: none;
-    transition-timing-function: ease;
-    transition-duration: .4s;
+  display: flex;
+  flex: 1 1 auto;
+  overflow: hidden;
+  height: 100%;
+  flex-direction: row;
+  opacity: 1;
+  transform: none;
+  transition-timing-function: ease;
+  transition-duration: 0.4s;
 }
 
 .aboutMeMenu {
-    display: flex;
-    height: inherit;
-    max-width: 275px !important;
-    min-width: 275px !important;
+  display: flex;
+  height: inherit;
+  max-width: 275px !important;
+  min-width: 275px !important;
 }
 
 .sections {
-    display: block;
-    border-right: 1px solid #1e2d3d;
-    height: 100%;
-    width: 5rem;
+  display: block;
+  border-right: 1px solid #1e2d3d;
+  height: 100%;
+  width: 5rem;
 }
 
 .sectionIcon {
-    opacity: .4;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
+  opacity: 0.4;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .sectionContent {
-    border-right: 1px solid #1e2d3d;
-    width: 100%;
-    height: 100%;
+  border-right: 1px solid #1e2d3d;
+  width: 100%;
+  height: 100%;
 }
 
 .sectionTitle {
-    display: flex;
-    border-bottom: 1px solid #1e2d3d;
-    min-height: 35px;
-    max-height: 35px;
-    width: 100%;
+  display: flex;
+  border-bottom: 1px solid #1e2d3d;
+  min-height: 35px;
+  max-height: 35px;
+  width: 100%;
 }
 
 .arrow {
-    transition: .1;
-    transform: rotate(90deg);
-    margin-right: 10px;
-    margin-left: .75rem;
+  transition: 0.1;
+  transform: rotate(90deg);
+  margin-right: 10px;
+  margin-left: 0.75rem;
 }
 
 .sectionPersonalInfo {
-    color: white;
-    font-size: .875rem;
-    line-height: 1.25rem;
-    line-height: .5rem;
+  color: white;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 0.5rem;
 }
 
 .itemContainer {
-    display: grid;
-    color: rgb(96 123 150);
-    align-items: center;
-    margin-bottom: .5rem;
-    margin-top: .5rem;
-    font-size: 14px;
-    cursor: pointer;
+  display: grid;
+  color: rgb(96 123 150);
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .item {
-    display: flex;
-    grid-column-start: span 2;
-    grid-column-end: span 2;
+  display: flex;
+  grid-column-start: span 2;
+  grid-column-end: span 2;
 }
 
 .diple {
-    margin-left: .75rem;
-    margin-right: .75rem;
-    max-width: fit-content;
-    width: .5rem;
-    height: auto;
-    display: block;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  max-width: fit-content;
+  width: 0.5rem;
+  height: auto;
+  display: block;
 }
 
 .folder {
-    margin-right: .75rem;
+  margin-right: 0.75rem;
 }
 
 .sectionContact {
-    border-bottom: 1px solid #1e2d3d;
-    cursor: pointer;
-    height: 35px;
-    border-top: 1px solid #1e2d3d;
-    align-items: center;
-    min-width: 100%;
-    display: flex;
-    font-size: 14px;
+  border-bottom: 1px solid #1e2d3d;
+  cursor: pointer;
+  height: 35px;
+  border-top: 1px solid #1e2d3d;
+  align-items: center;
+  min-width: 100%;
+  display: flex;
+  font-size: 14px;
 }
 
 .contactSources {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: .5rem;
-    margin-top: .5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .contactSourcesItem {
-    display: flex;
-    align-items: center;
-    margin-bottom: .5rem;
-    font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 14px;
 }
 
 .sourceItemsImage {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    height: auto;
-    max-width: 100%;
-    display: block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height: auto;
+  max-width: 100%;
+  display: block;
 }
 
 .contactSourcesText {
-    font-size: 13px;
-    color: rgb(96 123 150);
-    text-decoration: none;
+  font-size: 13px;
+  color: rgb(96 123 150);
+  text-decoration: none;
 }
 
 .bodyContainer {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: 100%;
-    height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  height: 100%;
 }
 
 .bodyLeft {
-    height: 100%;
-    overflow: hidden;
-    border-right: 1px solid #1e2d3d;
-    flex-direction: column;
-    width: 100%;
-    display: flex;
+  height: 100%;
+  overflow: hidden;
+  border-right: 1px solid #1e2d3d;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
 }
 
 .bodyRight {
-    height: 100%;
-    overflow: hidden;
-    flex-direction: column;
-    width: 100%;
-    display: flex;
+  height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
 }
 
 .bodyTab {
-    display: flex;
-    max-height: 35px;
-    min-height: 35px;
-    border-bottom: 1px solid #1e2d3d;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  max-height: 35px;
+  min-height: 35px;
+  border-bottom: 1px solid #1e2d3d;
+  align-items: center;
+  width: 100%;
 }
 
 .tab {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    border-right: 1px solid #1e2d3d;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-right: 1px solid #1e2d3d;
 }
 
 .personalInfoText {
-    color: rgb(96 123 150);
-    font-size: .875rem;
-    line-height: 1.25rem;
-    padding-left: .75rem;
-    padding-right: .75rem;
-    margin: 0;
+  color: rgb(96 123 150);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  margin: 0;
 }
 
 .personalInfoImg {
-    margin-left: .75rem;
-    margin-right: .75rem;
-    height: auto;
-    max-width: 100%;
-    display: block;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  height: auto;
+  max-width: 100%;
+  display: block;
 }
 
 .bodyTextContainer {
-    display: flex;
-    font-size: 14px;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  font-size: 14px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .bodyText {
-    margin-bottom: 1.25rem;
-    margin-top: 1.25rem;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    margin-right: 1.25rem;
-    margin-left: 1.25rem;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin-right: 1.25rem;
+  margin-left: 1.25rem;
 }
 
 .text {
-    display: flex;
-    align-items: flex-start;
-    color: rgb(96 123 150);
-    word-wrap: break-word;
+  display: flex;
+  align-items: flex-start;
+  color: rgb(96 123 150);
+  word-wrap: break-word;
 }
 
 .scrollBar {
-    width: 20px;
-    display: flex;
-    border-left: 1px solid #1e2d3d;
-    padding-bottom: .25rem;
-    padding-top: .25rem;
-    justify-content: center;
-    height: 100%;
+  width: 20px;
+  display: flex;
+  border-left: 1px solid #1e2d3d;
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
+  justify-content: center;
+  height: 100%;
 }
 
 .scroll {
-    background-color: #607b96;
-    height: 7px;
-    width: 14px;
+  background-color: #607b96;
+  height: 7px;
+  width: 14px;
 }
 
 .snippetContainer {
-    display: flex;
-    height: 100%;
-    overflow: hidden;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
 }
 
 .snippetSubContainer {
-    display: flex;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    padding-left: 1.5rem;
-    padding-right: 1.rem;
-    overflow: hidden;
-    flex-direction: column;
+  display: flex;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+  overflow: hidden;
+  flex-direction: column;
+  width: 100%;
 }
 
 .snippetTitle {
-    color: rgb(96, 123, 150);
-    font-size: .875rem;
-    line-height: 1.25rem;
-    margin-bottom: 1rem;
-    margin: 0;
+  color: rgb(96, 123, 150);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.snippets {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.snippet {
+  opacity: 1;
+  transform: none;
+  transition-property: opacity, transform;
+  transition-timing-function: ease;
+  transition-duration: 0.4s;
+  margin-bottom: 1.25rem;
+}
+
+.snippetHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.snippetImage {
+  border-radius: 9999px;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  max-width: 100%;
+  display: block;
+}
+
+.snippetHeaderAuthor {
+  display: flex;
+  flex-direction: column;
+}
+
+.snippetHeaderAuthorLink {
+  --tw-text-opacity: 1;
+  color: rgb(77 91 206 / var(--tw-text-opacity));
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding-bottom: 0.25rem;
+  text-decoration: inherit;
+  font-weight: 600;
+}
+
+.snippetHeaderAuthorDate {
+  --tw-text-opacity: 1;
+  color: rgb(96 123 150 / var(--tw-text-opacity));
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin: 0;
+}
+
+.snippetDetailsStarsContainer {
+  display: flex;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(96 123 150 / var(--tw-text-opacity));
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.snippetDetails {
+  display: flex;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.snippetStars {
+  display: flex;
+}
+
+.snippetDetailsIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  display: block;
+}
+
+.snippetStarsIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  max-width: 100%;
+  display: block;
+}
+
+.snippetCodeContainer {
+  background-color: #011221;
+  border: 1px solid #1e2d3d;
+  border-radius: 15px;
+  font-size: 12px;
+  max-height: 220px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 5px;
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    Liberation Mono, Courier New, monospace;
+}
+
+.code {
+    display: block;
+    padding: 1.5em;
+    max-height: 220px;
+    overflow: hidden;
+    white-space: pre-wrap;
+    width: -moz-max-content;
+    width: max-content;
+    background: #011221;
+    color: #607b96;
+    font-size: 1em;
 }

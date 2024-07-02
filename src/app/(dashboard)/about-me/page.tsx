@@ -24,13 +24,28 @@ const personalInfo = [
   },
 ];
 
+const codeSnippets = [
+  {
+    username: "mastifal89",
+    date: "17 months ago",
+  },
+  {
+    username: "mastifal89",
+    date: "8 months ago",
+  },
+];
+
 export default function AboutMe() {
   const [section, setSection] = useState(0);
-  const [codeSnippet, setCodeSnippet] = useState("");
+  const [codeSnippet, setCodeSnippet] = useState<any>([]);
 
   useEffect(() => {
-    const snippet = generateRandomCodeSnippet();
-    setCodeSnippet(snippet);
+    // generate snippets based on number of codeSnippets
+    let snippets = [];
+    for (let i = 0; i < codeSnippets.length; i++) {
+      snippets.push(generateRandomCodeSnippet());
+    }
+    setCodeSnippet(snippets);
   }, []);
 
   const handleSectionClick = (section: number) => {
@@ -111,9 +126,52 @@ export default function AboutMe() {
           <div className={styles.snippetContainer}>
             <div className={styles.snippetSubContainer}>
               <h3 className={styles.snippetTitle}>// Code snippet showcase</h3>
-              <pre>
-                <code className="language-javascript">{codeSnippet}</code>
-              </pre>
+              <div className={styles.snippets}>
+                {codeSnippets.map((snippet, index) => (
+                  <div key={index} className={styles.snippet}>
+                    <div className={styles.snippetHeader}>
+                      <div style={{ display: "flex" }}>
+                        <img
+                          src="/images/85245377.jpeg"
+                          className={styles.snippetImage}
+                        />
+                        <div className={styles.snippetHeaderAuthor}>
+                          <a
+                            id="username"
+                            href="/"
+                            target="_blank"
+                            className={styles.snippetHeaderAuthorLink}
+                          >
+                            @{snippet.username}
+                          </a>
+                          <p className={styles.snippetHeaderAuthorDate}>
+                            Created {snippet.date}
+                          </p>
+                        </div>
+                      </div>
+                      <div className={styles.snippetDetailsStarsContainer}>
+                        <div className={styles.snippetDetails}>
+                          <img
+                            src="/icons/comments.svg"
+                            className={styles.snippetDetailsIcon}
+                          />
+                          <span>details</span>
+                        </div>
+                        <div className={styles.snippetStars}>
+                          <img
+                            src="/icons/star.svg"
+                            className={styles.snippetStarsIcon}
+                          />
+                          <span>stars</span>
+                        </div>
+                      </div>
+                    </div>
+                    <pre className={styles.snippetCodeContainer}>
+                      <code className={styles.code}>{codeSnippet[index]}</code>
+                    </pre>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
