@@ -132,7 +132,7 @@ export default function AboutMe() {
                     <div className={styles.snippetHeader}>
                       <div style={{ display: "flex" }}>
                         <img
-                          src="/images/85245377.jpeg"
+                          src="/images/1551846149745.jfif"
                           className={styles.snippetImage}
                         />
                         <div className={styles.snippetHeaderAuthor}>
