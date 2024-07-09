@@ -1,15 +1,20 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import {
-  generateRandomCodeSnippet,
-  getRandomElement,
-} from "../../utils/codeSnippetGenerator";
+import { generateRandomCodeSnippet } from "../../utils/codeSnippetGenerator";
 import styles from "./styles.module.css";
+import Prism from "prismjs";
+import "prismjs/themes/prism-tomorrow.css";
 
 const personalInfo = [
   {
     title: "bio",
-    content: "asdasdasdasdasd",
+    content: `/**
+ *
+ * About me
+ * I have 5 years of experience in web development lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+ *
+ * Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat officia deserunt mollit anim id est laborum.
+ */`,
     icon: "/icons/folder1.svg",
   },
   {
@@ -48,9 +53,15 @@ export default function AboutMe() {
     setCodeSnippet(snippets);
   }, []);
 
+  useEffect(() => {
+    Prism.highlightAll(); // Highlight the code snippets whenever they change
+  }, [section]);
+
   const handleSectionClick = (section: number) => {
     setSection(section);
   };
+
+  console.log(personalInfo[section]);
 
   return (
     <main className={styles.main}>
@@ -113,9 +124,13 @@ export default function AboutMe() {
             </div>
           </div>
           <div className={styles.bodyTextContainer}>
-            <div className={styles.bodyText}>
-              <div className={styles.text}>asdasdasdasdasd</div>
-            </div>
+            {
+              <pre className={styles.bodyText}>
+                  <code className="language-javascript">
+                    <span className={styles.textContent}>{personalInfo[section].content}</span>
+                  </code>
+              </pre>
+            }
             <div className={styles.scrollBar}>
               <div className={styles.scroll}></div>
             </div>

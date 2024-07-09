@@ -1,8 +1,14 @@
+"use client";
 import React from "react";
 import styles from "./styles.module.css";
 import Snake from "../components/snakeGame/snake";
+import { useTextWriting } from "../utils/useTextWriting";
 
 export default function Dashboard() {
+  const text = 'Front-end Developer';
+  const speed = 100; // Speed in milliseconds
+  const displayedText = useTextWriting(text, speed);
+
   return (
     <main className={styles.dashboardMain}>
       <div className={styles.dashboardGradientBlue}></div>
@@ -13,8 +19,8 @@ export default function Dashboard() {
           <div className={styles.firstSectionHeadName}>Juan Blasco</div>
           <span className={styles.firstSectionDeveloper}>
             &#62; &nbsp;
-            <div>
-              Front-end developer
+            <div id="stack">
+              {displayedText}
               <span className={styles.blinkingCursor}> |</span>
             </div>
           </span>
