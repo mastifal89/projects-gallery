@@ -6,7 +6,7 @@ import { useTextWriting } from "../utils/useTextWriting";
 
 export default function Dashboard() {
   const text = 'Front-end Developer';
-  const speed = 100; // Speed in milliseconds
+  const speed = 100;
   const displayedText = useTextWriting(text, speed);
 
   return (
@@ -26,8 +26,8 @@ export default function Dashboard() {
           </span>
         </div>
         <div className={styles.firstSectionInfo}>
-          <span className={styles.info}> // complete the game to continue </span>
-          <span className={styles.info}> // you can also see it on my Github page </span>
+          <span className={styles.info}> {`// complete the game to continue`} </span>
+          <span className={styles.info}> {`// you can also see it on my Github page`} </span>
           <p className={styles.code}>
             <span className={styles.identifier}> const</span>
             <span className={styles.variable}> githubLink</span>

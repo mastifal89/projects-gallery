@@ -1,6 +1,8 @@
 "use client";
 import React, { useRef, useEffect } from "react";
 import "./snake.css";
+import Image from "next/image";
+import { start } from "repl";
 
 type Game = {
   score: number;
@@ -82,7 +84,7 @@ export default function Snake() {
         }
       }
     });
-  }, [game.gameStarted, game.gameOver, game.direction]);
+  }, [game.gameStarted, game.gameOver, game.direction, startGame, startAgain]);
 
   function render() {
     let gameScreen = document.getElementById("game-screen") as HTMLDivElement;
@@ -291,28 +293,28 @@ export default function Snake() {
 
   return (
     <div id="console">
-      <img
+      <Image height={15} width={15}
+        alt="image"
         id="corner"
         src="/icons/console/bolt-up-left.svg"
-        alt=""
         className="bolt-up-left"
       />
-      <img
+      <Image height={15} width={15}
+        alt="image"
         id="corner"
         src="/icons/console/bolt-up-right.svg"
-        alt=""
         className="bolt-up-right"
       />
-      <img
+      <Image height={15} width={15}
+        alt="image"
         id="corner"
         src="/icons/console/bolt-down-left.svg"
-        alt=""
         className="bolt-down-left"
       />
-      <img
+      <Image height={15} width={15}
+        alt="image"
         id="corner"
         src="/icons/console/bolt-down-right.svg"
-        alt=""
         className="bolt-down-right"
       />
 
@@ -327,13 +329,8 @@ export default function Snake() {
         </button>
       </div>
       <div id="congrats" style={{ display: "none" }}>
-        <span className="congrats-text">
-          WELL DONE!
-        </span>
-        <button
-          className="congrats-button"
-          onClick={startAgain}
-        >
+        <span className="congrats-text">WELL DONE!</span>
+        <button className="congrats-button" onClick={startAgain}>
           play-again
         </button>
       </div>
@@ -342,11 +339,9 @@ export default function Snake() {
         className="h-full flex flex-col items-end justify-between"
       >
         <div>
-          <div
-            id="instructions"
-          >
-            <p>// use your keyboard</p>
-            <p>// arrows to play</p>
+          <div id="instructions">
+            <p>{`// use your keyboard`}</p>
+            <p>{`// arrows to play`}</p>
 
             <div
               id="buttons"
@@ -357,7 +352,7 @@ export default function Snake() {
                 className="button-up"
                 onClick={() => move("up")}
               >
-                <img src="/icons/console/arrow-button.svg" alt="" />
+                <Image height={15} width={15} alt="image" src="/icons/console/arrow-button.svg" />
               </button>
 
               <div className="buttons-grid">
@@ -366,9 +361,9 @@ export default function Snake() {
                   className="button-left"
                   onClick={() => move("left")}
                 >
-                  <img
+                  <Image height={15} width={15}
+                    alt="image"
                     src="/icons/console/arrow-button.svg"
-                    alt=""
                     className="-rotate-90"
                   />
                 </button>
@@ -378,9 +373,9 @@ export default function Snake() {
                   className="button-down"
                   onClick={() => move("down")}
                 >
-                  <img
+                  <Image height={15} width={15}
+                    alt="image"
                     src="/icons/console/arrow-button.svg"
-                    alt=""
                     className="rotate-180"
                   />
                 </button>
@@ -390,9 +385,9 @@ export default function Snake() {
                   className="button-right"
                   onClick={() => move("right")}
                 >
-                  <img
+                  <Image height={15} width={15}
+                    alt="image"
                     src="/icons/console/arrow-button.svg"
-                    alt=""
                     className="rotate-90"
                   />
                 </button>
@@ -400,11 +395,9 @@ export default function Snake() {
             </div>
           </div>
           <div className="score-board">
-            <p className="font-fira_retina text-white pt-5">// food left</p>
+            <p className="font-fira_retina text-white pt-5">{`// food left`}</p>
 
-            <div
-              className="score"
-            >
+            <div className="score">
               <div className="food"></div>
               <div className="food"></div>
               <div className="food"></div>

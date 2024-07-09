@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
 import Project from "@/app/components/project/project";
+import Image from "next/image";
 
 const projects = [
   {
@@ -83,7 +84,7 @@ let stack = [
   },
 ];
 
-export default function page() {
+export default function Page() {
   const [filter, setFilter] = useState(["all"]);
   const [stacks, setStacks] = useState(stack);
 
@@ -98,10 +99,8 @@ export default function page() {
       );
     } else {
       if (filter.includes(stack)) {
-        // Remove the stack from the filter
         const newFilter = filter.filter((item) => item !== stack);
 
-        // If no stack is left after removal, reset to "all"
         setFilter(newFilter.length === 0 ? ["all"] : newFilter);
 
         setStacks(
@@ -113,7 +112,6 @@ export default function page() {
           })
         );
       } else {
-        // Add the new stack and remove "all" if present
         const newFilter = [...filter.filter((item) => item !== "all"), stack];
 
         setFilter(newFilter);
@@ -134,7 +132,7 @@ export default function page() {
     <div className={styles.projectsContainer}>
       <div className={styles.filterMenu}>
         <div className={styles.filterTitle}>
-          <img
+          <Image height={10} width={10}
             src="/icons/arrow-fill.svg"
             alt="arrow"
             className={styles.arrowTitle}
@@ -151,7 +149,7 @@ export default function page() {
                 checked={stack.clicked === 1}
                 value={stack.name}
               />
-              <img
+              <Image height={15} width={15}
                 src={stack.icon}
                 alt={stack.name}
                 className={styles.navFiltersIcon}
@@ -172,7 +170,7 @@ export default function page() {
                     .join("; ")
                 : "all;"}
             </p>
-            <img
+            <Image height={15} width={15}
               src="/icons/close.svg"
               alt="close"
               className={styles.bodyTitleIcon}

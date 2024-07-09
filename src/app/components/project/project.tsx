@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
+import Image from "next/image";
 
 interface Props {
   title: string;
@@ -28,9 +29,9 @@ export default function Project({
       <div className={styles.projectCardContainer}>
         <div className={styles.projectCardImageContainer}>
           <div className={styles.projectCardImageIconContainer}>
-            <img src={icon} className={styles.projectCardImageIcon} />
+            <Image height={15} width={15} alt="image" src={icon} className={styles.projectCardImageIcon} />
           </div>
-          <img className={styles.projectCardImage} src={image} />
+          <Image height={15} width={15} alt="image" className={styles.projectCardImage} src={image} />
         </div>
         <div className={styles.descriptionContainer}>
           <p className={styles.description}>{description}</p>

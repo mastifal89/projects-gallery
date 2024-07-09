@@ -4,6 +4,7 @@ import { generateRandomCodeSnippet } from "../../utils/codeSnippetGenerator";
 import styles from "./styles.module.css";
 import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
+import Image from "next/image";
 
 const personalInfo = [
   {
@@ -45,7 +46,6 @@ export default function AboutMe() {
   const [codeSnippet, setCodeSnippet] = useState<any>([]);
 
   useEffect(() => {
-    // generate snippets based on number of codeSnippets
     let snippets = [];
     for (let i = 0; i < codeSnippets.length; i++) {
       snippets.push(generateRandomCodeSnippet());
@@ -54,7 +54,7 @@ export default function AboutMe() {
   }, []);
 
   useEffect(() => {
-    Prism.highlightAll(); // Highlight the code snippets whenever they change
+    Prism.highlightAll();
   }, [section]);
 
   const handleSectionClick = (section: number) => {
@@ -68,18 +68,18 @@ export default function AboutMe() {
       <div className={styles.aboutMeMenu}>
         <section className={styles.sections}>
           <div className={styles.sectionIcon}>
-            <img src="/icons/info-professional.svg" />
+            <Image height={25} width={25} alt="image" src="/icons/info-professional.svg" />
           </div>
           <div className={styles.sectionIcon}>
-            <img src="/icons/info-personal.svg" />
+            <Image height={25} width={25} alt="image" src="/icons/info-personal.svg" />
           </div>
           <div className={styles.sectionIcon}>
-            <img src="/icons/info-hobbies.svg" />
+            <Image height={25} width={25} alt="image" src="/icons/info-hobbies.svg" />
           </div>
         </section>
         <section className={styles.sectionContent}>
           <div className={styles.sectionTitle}>
-            <img className={styles.arrow} src="/icons/arrow.svg" />
+            <Image height={10} width={10} alt="image" className={styles.arrow} src="/icons/arrow.svg" />
             <p className={styles.sectionPersonalInfo}>personal-info</p>
           </div>
           {personalInfo.map((info, index) => (
@@ -89,25 +89,25 @@ export default function AboutMe() {
               onClick={() => handleSectionClick(index)}
             >
               <div className={styles.item}>
-                <img className={styles.diple} src="/icons/diple.svg" />
-                <img className={styles.folder} src={info.icon} />
+                <Image height={15} width={15} alt="image" className={styles.diple} src="/icons/diple.svg" />
+                <Image height={15} width={15} alt="image" className={styles.folder} src={info.icon} />
                 <p style={{ margin: 0 }}>{info.title}</p>
               </div>
             </div>
           ))}
           <div className={styles.sectionContact}>
-            <img className={styles.arrow} src="/icons/arrow.svg" />
+            <Image height={10} width={10} alt="image" className={styles.arrow} src="/icons/arrow.svg" />
             <p className={styles.sectionPersonalInfo}>contacts</p>
           </div>
           <div className={styles.contactSources}>
             <div className={styles.contactSourcesItem}>
-              <img className={styles.sourceItemsImage} src="/icons/email.svg" />
+              <Image height={15} width={15} alt="image" className={styles.sourceItemsImage} src="/icons/email.svg" />
               <a className={styles.contactSourcesText} href="/">
                 juanrata89@gmail.com
               </a>
             </div>
             <div className={styles.contactSourcesItem}>
-              <img className={styles.sourceItemsImage} src="/icons/phone.svg" />
+              <Image height={15} width={15} alt="image" className={styles.sourceItemsImage} src="/icons/phone.svg" />
               <a className={styles.contactSourcesText} href="/">
                 +543525487411
               </a>
@@ -120,7 +120,7 @@ export default function AboutMe() {
           <div className={styles.bodyTab}>
             <div className={styles.tab}>
               <p className={styles.personalInfoText}>personal-info</p>
-              <img className={styles.personalInfoImg} src="/icons/close.svg" />
+              <Image height={15} width={15} alt="image" className={styles.personalInfoImg} src="/icons/close.svg" />
             </div>
           </div>
           <div className={styles.bodyTextContainer}>
@@ -140,13 +140,13 @@ export default function AboutMe() {
           <div className={styles.bodyTab}></div>
           <div className={styles.snippetContainer}>
             <div className={styles.snippetSubContainer}>
-              <h3 className={styles.snippetTitle}>// Code snippet showcase</h3>
+              <h3 className={styles.snippetTitle}>{`// Code snippet showcase`}</h3>
               <div className={styles.snippets}>
                 {codeSnippets.map((snippet, index) => (
                   <div key={index} className={styles.snippet}>
                     <div className={styles.snippetHeader}>
                       <div style={{ display: "flex" }}>
-                        <img
+                        <Image height={15} width={15} alt="image"
                           src="/images/1551846149745.jfif"
                           className={styles.snippetImage}
                         />
@@ -166,14 +166,14 @@ export default function AboutMe() {
                       </div>
                       <div className={styles.snippetDetailsStarsContainer}>
                         <div className={styles.snippetDetails}>
-                          <img
+                          <Image height={15} width={15} alt="image"
                             src="/icons/comments.svg"
                             className={styles.snippetDetailsIcon}
                           />
                           <span>details</span>
                         </div>
                         <div className={styles.snippetStars}>
-                          <img
+                          <Image height={15} width={15} alt="image"
                             src="/icons/star.svg"
                             className={styles.snippetStarsIcon}
                           />
