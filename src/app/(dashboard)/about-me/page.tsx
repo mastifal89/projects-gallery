@@ -53,10 +53,6 @@ export default function AboutMe() {
     setCodeSnippet(snippets);
   }, []);
 
-  useEffect(() => {
-    Prism.highlightAll();
-  }, [section]);
-
   const handleSectionClick = (section: number) => {
     setSection(section);
   };
