@@ -61,8 +61,6 @@ export default function AboutMe() {
     setSection(section);
   };
 
-  console.log(personalInfo[section]);
-
   return (
     <main className={styles.main}>
       <div className={styles.aboutMeMenu}>
