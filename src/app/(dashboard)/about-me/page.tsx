@@ -118,13 +118,11 @@ export default function AboutMe() {
             </div>
           </div>
           <div className={styles.bodyTextContainer}>
-            {
               <pre className={styles.bodyText}>
                   <code className="language-javascript">
                     <span className={styles.textContent}>{personalInfo[section].content}</span>
                   </code>
               </pre>
-            }
             <div className={styles.scrollBar}>
               <div className={styles.scroll}></div>
             </div>
