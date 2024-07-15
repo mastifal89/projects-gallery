@@ -19,7 +19,6 @@ export default function Project({
   image,
   stack,
 }: Props) {
-
   return (
     <div className={styles.projectCard}>
       <span className={styles.projectTitleContainer}>
@@ -29,9 +28,23 @@ export default function Project({
       <div className={styles.projectCardContainer}>
         <div className={styles.projectCardImageContainer}>
           <div className={styles.projectCardImageIconContainer}>
-            <Image height={15} width={15} alt="image" src={icon} className={styles.projectCardImageIcon} />
+            <Image
+              height={150}
+              width={150}
+              alt="image"
+              src={icon}
+              className={styles.projectCardImageIcon}
+            />
           </div>
-          <Image height={15} width={15} alt="image" className={styles.projectCardImage} src={image} />
+          <Image
+            alt="image"
+            height={0}
+            width={0}
+            sizes="100vw"
+            style={{ width: "100%" }}
+            className={styles.projectCardImage}
+            src={image}
+          />
         </div>
         <div className={styles.descriptionContainer}>
           <p className={styles.description}>{description}</p>
