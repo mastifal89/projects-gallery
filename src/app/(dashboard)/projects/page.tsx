@@ -4,85 +4,8 @@ import React, { useState } from "react";
 import styles from "./styles.module.css";
 import Project from "@/app/components/project/project";
 import Image from "next/image";
-
-const projects = [
-  {
-    title: "Project 1",
-    subtitle: " // This is a subtitle",
-    description: "This is a description",
-    icon: "/icons/react-project-icon.svg",
-    image: "/images/react-project.png",
-    stack: "react",
-  },
-  {
-    title: "Project 2",
-    subtitle: " // This is a subtitle",
-    description: "This is a description",
-    icon: "/icons/react-project-icon.svg",
-    image: "/images/react-project.png",
-    stack: "react",
-  },
-  {
-    title: "Project 3",
-    subtitle: " // This is a subtitle",
-    description: "This is a description",
-    icon: "/icons/react-project-icon.svg",
-    image: "/images/react-project.png",
-    stack: "react",
-  },
-  {
-    title: "Project 4",
-    subtitle: " // This is a subtitle",
-    description: "This is a description",
-    icon: "/icons/react-project-icon.svg",
-    image: "/images/react-project.png",
-    stack: "react",
-  },
-  {
-    title: "Project 5",
-    subtitle: " // This is a subtitle",
-    description: "This is a description",
-    icon: "/icons/react-project-icon.svg",
-    image: "/images/react-project.png",
-    stack: "react",
-  },
-  {
-    title: "Project 6",
-    subtitle: " // This is a subtitle",
-    description: "This is a description",
-    icon: "/icons/react-project-icon.svg",
-    image: "/images/react-project.png",
-    stack: "react",
-  },
-];
-
-let stack = [
-  {
-    name: "React",
-    icon: "/icons/react-icon.svg",
-    clicked: 0,
-  },
-  {
-    name: "HTML",
-    icon: "/icons/html-icon.svg",
-    clicked: 0,
-  },
-  {
-    name: "CSS",
-    icon: "/icons/css-icon.svg",
-    clicked: 0,
-  },
-  {
-    name: "Vue",
-    icon: "/icons/vue-icon.svg",
-    clicked: 0,
-  },
-  {
-    name: "Angular",
-    icon: "/icons/angular-icon.svg",
-    clicked: 0,
-  },
-];
+import { projects } from "@/app/utils/projectList";
+import { stack } from "@/app/utils/stackList";
 
 export default function Page() {
   const [filter, setFilter] = useState(["all"]);
@@ -193,6 +116,7 @@ export default function Page() {
                 description={project.description}
                 icon={project.icon}
                 image={project.image}
+                link={project.link}
                 stack={project.stack}
               />
             ))}

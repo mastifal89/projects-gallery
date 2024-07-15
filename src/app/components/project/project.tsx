@@ -8,6 +8,7 @@ interface Props {
   description: string;
   icon: string;
   image: string;
+  link: string;
   stack: string;
 }
 
@@ -17,6 +18,7 @@ export default function Project({
   description,
   icon,
   image,
+  link,
   stack,
 }: Props) {
   return (
@@ -48,7 +50,7 @@ export default function Project({
         </div>
         <div className={styles.descriptionContainer}>
           <p className={styles.description}>{description}</p>
-          <a href="#" className={styles.descriptionButton}>
+          <a href={link} className={styles.descriptionButton}>
             view-project
           </a>
         </div>
