@@ -112,7 +112,7 @@
   border-radius: 0.5rem; /* 8px */
 }
 
-@media (min-width: 1024px) and (max-width: 1536px) {
+@media (min-width: 1024px) {
   #game-screen {
     width: 192px;
     height: 320px;

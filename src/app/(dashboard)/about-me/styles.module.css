@@ -191,9 +191,9 @@
   overflow: hidden !important;
   width: 100%;
   height: 100%;
-  white-space: pre-wrap; /* This preserves whitespace and wraps the text */
-  word-wrap: break-word; /* This ensures long words break and don't overflow */
-  overflow-y: auto; /* Adds a scrollbar if content overflows vertically */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-y: auto;
 }
 
 .bodyText {

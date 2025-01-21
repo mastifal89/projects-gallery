@@ -6,8 +6,13 @@ import Project from "@/app/components/project/project";
 import Image from "next/image";
 import { projects } from "@/app/utils/projectList";
 import { stack } from "@/app/utils/stackList";
+import useFetchRepos from "@/app/hooks/useFetchRepos";
 
 export default function Page() {
+  const { repos, loading, error } = useFetchRepos();
+
+  console.log(repos, loading, error);
+
   const [filter, setFilter] = useState(["all"]);
   const [stacks, setStacks] = useState(stack);
 
